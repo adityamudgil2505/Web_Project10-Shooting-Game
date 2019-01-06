@@ -1,0 +1,53 @@
+$bgColor : #c5c21a;
+body{
+  background-color: $bgColor;
+}
+.container{
+  height: 1100px;
+  width: 1900px;
+  background-color: $bgColor;
+  margin: 100px auto;
+  position: relative;
+  border: 2px solid black;
+  box-shadow: 10px 10px 20px black;
+  .header{
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%,0%);
+    font-size: 60px;
+  }
+  .playGround{
+    position: absolute;
+    top: 250px;
+    left: 210px;
+    width: 95%;
+    .combo{
+      display: inline-block;
+      height: 350px;
+      width: 30%;
+      margin: 25px 0px 25px;
+      position: relative;
+      .cartoon img{
+        width: 250px;
+        height: 250px;
+        position: absolute;
+        bottom: 70px;
+        opacity: 1;
+        transition: 500ms ease-in-out;
+      }
+      .sand img{
+        position: absolute;
+        top: 200px;
+      }
+    }
+  }
+}
+.cartoon-full img{
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  bottom: 70px;
+  opacity: 1;
+
+}

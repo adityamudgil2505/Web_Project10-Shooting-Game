@@ -1,0 +1,62 @@
+body {
+  background-color: #c5c21a;
+}
+
+.container {
+  height: 1100px;
+  width: 1900px;
+  background-color: #c5c21a;
+  margin: 100px auto;
+  position: relative;
+  border: 2px solid black;
+  -webkit-box-shadow: 10px 10px 20px black;
+          box-shadow: 10px 10px 20px black;
+}
+
+.container .header {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  font-size: 60px;
+}
+
+.container .playGround {
+  position: absolute;
+  top: 250px;
+  left: 210px;
+  width: 95%;
+}
+
+.container .playGround .combo {
+  display: inline-block;
+  height: 350px;
+  width: 30%;
+  margin: 25px 0px 25px;
+  position: relative;
+}
+
+.container .playGround .combo .cartoon img {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  bottom: 70px;
+  opacity: 1;
+  -webkit-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
+}
+
+.container .playGround .combo .sand img {
+  position: absolute;
+  top: 200px;
+}
+
+.cartoon-full img {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  bottom: 70px;
+  opacity: 1;
+}
+/*# sourceMappingURL=main.css.map */
