@@ -3,6 +3,7 @@ body {
 }
 
 .container {
+  position: relative;
   height: 1100px;
   width: 1900px;
   background-color: #c5c21a;
@@ -11,6 +12,28 @@ body {
   border: 2px solid black;
   -webkit-box-shadow: 10px 10px 20px black;
           box-shadow: 10px 10px 20px black;
+}
+
+.container .btns #play {
+  position: relative;
+  height: 100px;
+  top: 50px;
+  left: 50px;
+}
+
+.container .btns #play:hover {
+  cursor: pointer;
+}
+
+.container .btns #replay {
+  position: relative;
+  height: 100px;
+  top: 50px;
+  left: 1650px;
+}
+
+.container .btns #replay:hover {
+  cursor: pointer;
 }
 
 .container .header {
@@ -22,29 +45,47 @@ body {
   font-size: 60px;
 }
 
+.container .header .score {
+  font-size: 90px;
+  margin-left: 20px;
+  border: 5px solid black;
+  padding: 0px 30px;
+}
+
 .container .playGround {
   position: absolute;
   top: 250px;
   left: 210px;
-  width: 95%;
+  width: 75%;
+  padding: 0px;
 }
 
 .container .playGround .combo {
   display: inline-block;
   height: 350px;
-  width: 30%;
-  margin: 25px 0px 25px;
+  width: 374px;
+  margin: 25px 0px 25px 80px;
   position: relative;
 }
 
 .container .playGround .combo .cartoon img {
   width: 250px;
+  height: 0px;
+  position: absolute;
+  bottom: 70px;
+  opacity: 0;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+.container .playGround .combo .cartoon_full img {
+  width: 250px;
   height: 250px;
   position: absolute;
   bottom: 70px;
   opacity: 1;
-  -webkit-transition: 500ms ease-in-out;
-  transition: 500ms ease-in-out;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
 }
 
 .container .playGround .combo .sand img {
@@ -52,11 +93,7 @@ body {
   top: 200px;
 }
 
-.cartoon-full img {
-  width: 250px;
-  height: 250px;
-  position: absolute;
-  bottom: 70px;
-  opacity: 1;
+.container .playGround:hover {
+  cursor: url(/img/gun.png), auto;
 }
 /*# sourceMappingURL=main.css.map */
