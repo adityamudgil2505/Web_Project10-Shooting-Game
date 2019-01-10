@@ -5,6 +5,9 @@ var play = $('#play');
 var replay = $('#replay');
 var timer = 10000;
 var timeUp = false;
+var setting = $('.setting');
+var level = [{min:500, max:800},{min:300, max:600}, {min:100, max:400}];
+var levelVal=0;
 //  console.log(cartoon);
 // random numnber generator
 var randomGen = (min, max) => Math.random() * (max - min) + min;
@@ -13,13 +16,13 @@ function randomCartoon() {
   return randomGen(0, 5).toFixed();
 }
 
-function randomTime() {
-  return randomGen(500, 1000);
+function randomTime(a,b) {
+  return randomGen(a, b);
 }
 
 function peep(hole) {
   let cartoonIndex = randomCartoon();
-  let time = randomTime();
+  let time = randomTime(level[levelVal-1].min,level[levelVal-1].max);
   if(timeUp){return}
   if(hole == cartoonIndex)  return peep(cartoonIndex);
   $(cartoon).eq(cartoonIndex).attr('class', 'cartoon_full');
@@ -32,9 +35,14 @@ function peep(hole) {
  //peep(randomCartoon());
 function startGame()
 {  timeUp=false;
+   timer = $(".time").children("option:selected").val();
+   levelVal = $(".levels").children("option:selected").val();
+   console.log(timer);
+   console.log(typeof(timer));
    peep(randomCartoon());
    setTimeout(()=>{
     timeUp=true;
+    setting.fadeIn(500);
    },timer);
 }
 // on hit
@@ -67,6 +75,7 @@ function createHole(x,y)
 }
 // on play
 play.on('click',_=>{
+  setting.fadeOut(500);
   setTimeout(()=>{
     startGame()
   },2000);  

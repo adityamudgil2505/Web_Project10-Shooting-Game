@@ -13,7 +13,7 @@ body{
   box-shadow: 10px 10px 20px black;
   .btns{
     #play{
-      position: relative;
+      position: absolute;
       height: 100px;
       top: 50px;
       left: 50px;
@@ -22,12 +22,42 @@ body{
       }
     }
     #replay{
-      position: relative;
+      position: absolute;
       height: 100px;
       top: 50px;
-      left: 1650px;
+      right: 50px;;
       &:hover{
         cursor: pointer;
+      }
+    }
+    .setting{
+      position: absolute;
+      top: 170px;
+      left: 40px;
+      width: 128px;
+      transition: width 1s ease-in-out;
+      overflow: hidden;
+      img{
+        transform: rotate(0deg);
+        transition: transform 1s ease-in-out;
+      }
+      .levels, .time{
+        position: absolute;
+        top: 30%;
+        height: 50px;
+        width: 140px;
+        background-color: black;
+        color: white;
+      }
+      .time{
+        left: 270px;
+      }
+      &:hover{
+        width: 450px;
+        cursor: pointer;
+        img{
+          transform: rotate(60deg);
+        }
       }
     }
   }
@@ -62,7 +92,7 @@ body{
         position: absolute;
         bottom: 70px;
         opacity: 0;
-        transition: 300ms ease-in-out;
+        transition: 250ms ease-in-out;
       }
       .cartoon_full img{
         width: 250px;
@@ -70,7 +100,7 @@ body{
         position: absolute;
         bottom: 70px;
         opacity: 1;
-        transition: 300ms ease-in-out;
+        transition: 250ms ease-in-out;
       }
       .sand img{
         position: absolute;

@@ -12,7 +12,21 @@
 
 <body>
   <div class="container">
-    <div class="btns"><img id="play" src="img/play.png"><img id="replay" src="img/replay.png"></div>
+    <div class="btns"><img id="play" src="img/play.png">
+      <div class="setting">
+        <img src="img/setting.png">
+        <select class="levels">
+          <option value="1">Easy</option>
+          <option value="2">Medium</option>
+          <option value="3">Difficult</option>
+        </select>
+        <select class="time">
+          <option value="10000">10sec.</option>
+          <option value="20000">20sec.</option>
+          <option value="30000">30sec.</option>
+        </select>
+      </div>
+      <img id="replay" src="img/replay.png"></div>
     <div class="header">
       <span class="title">Shooting Game</span>
       <span class="score">0</span>
