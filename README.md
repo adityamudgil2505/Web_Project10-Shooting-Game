@@ -2,10 +2,12 @@
 ### Web_Project10
 # Shooting Game
 ## About
-This is a simple and funny game in which you have to shoot the cartoon. One gameplay will be of 10 sec.
+This is a simple and funny game in which you have to shoot the cartoon.
 Other features are
 - Unlimited Ammo
-- 10 sec. gameplay
+- 10, 20, 30 sec. gameplay
+- Different Levels
+- Display High Score
 
 ## Skills used
 - HTML
