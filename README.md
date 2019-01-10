@@ -17,3 +17,6 @@ Other features are
 1. Go to "https://github.com/adityamudgil2505/Web_Project10-Shooting-Game". Now click "Clone or download" button and select "Download zip" and unzip it.
 2. Just open file "index.html"
 3. Enjoy the game.
+
+### Screenshots
+
