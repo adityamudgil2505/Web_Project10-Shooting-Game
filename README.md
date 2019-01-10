@@ -19,4 +19,5 @@ Other features are
 3. Enjoy the game.
 
 ### Screenshots
-
+![alt GamePlay01](https://github.com/adityamudgil2505/Web_Project10-Shooting-Game/blob/master/Screenshots/Game%20Play%2001.png)
+![alt GamePlay01](https://github.com/adityamudgil2505/Web_Project10-Shooting-Game/blob/master/Screenshots/Game%20Play%2002.png)
