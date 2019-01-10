@@ -50,18 +50,16 @@ $('.playGround').on('click',(e)=>{
   let y = e.clientY;
   createHole(x,y);
   e.stopPropagation();
-  //playGround.append("<img src='/img/bullet_hole.png'>");
 });
 // creating hole
 function createHole(x,y)
-{ //playGround.append("<img src='/img/bullet_hole.png'>");
-  var hole ;
-  d = $("<img>", {src:"/img/bullet_hole.png", class:"hole"});
+{ var hole ;
+  d = $("<img>", {src:"img/bullet_hole.png", class:"hole"});
   $("body").append(d);
   d.css({
     "position":"absolute",
     "left":x-20+"px",
-    "top":y+8+"px",
+    "top":y-18+"px",
   });
   setTimeout(()=>{
     d.fadeOut(500);

@@ -94,6 +94,6 @@ body {
 }
 
 .container .playGround:hover {
-  cursor: url(/img/gun.png), auto;
+  cursor: url(../img/gun.png), auto;
 }
 /*# sourceMappingURL=main.css.map */
