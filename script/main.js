@@ -8,6 +8,11 @@ var timeUp = false;
 var setting = $('.setting');
 var level = [{min:500, max:800},{min:300, max:600}, {min:100, max:400}];
 var levelVal=0;
+// var hScore = {
+//   0: "0",
+//   1: "0",
+//   2: "0"
+// };
 //  console.log(cartoon);
 // random numnber generator
 var randomGen = (min, max) => Math.random() * (max - min) + min;
@@ -43,6 +48,8 @@ function startGame()
    setTimeout(()=>{
     timeUp=true;
     setting.fadeIn(500);
+    // checking highscore
+    checkHS();
    },timer);
 }
 // on hit
@@ -87,3 +94,41 @@ replay.on('click',_=>{
     startGame()
   },2000);  
 });
+
+// changing value of Level
+$(".levels").change(function () {
+  updateHSBar();
+  console.log("changed");
+});
+
+// storing HS in local storage
+updateHSBar();
+function updateHSBar()
+{ let obj = JSON.parse(window.localStorage.getItem('user'));
+  if(obj==null)
+  { $('.highScore').text(0);
+    let obj = {
+      1:"0",
+      2:"0",
+      3:"0"
+    } 
+    window.localStorage.setItem('user', JSON.stringify(obj));
+  }
+  else
+  { $('.score').text("0");
+    $('.highScore').text(obj[$('.levels').val()]);
+  }
+}
+// check highScore
+function checkHS()
+{ let currentScore = $('.score').text();
+  let currentHighScore = $('.highScore').text();
+  if(Number(currentScore)>Number(currentHighScore))
+  { console.log("HS");
+    $('.highScore').text(currentScore);
+    let obj = JSON.parse(window.localStorage.getItem('user'));
+    obj[levelVal] = currentScore;
+    window.localStorage.setItem('user', JSON.stringify(obj));
+    updateHSBar();
+  }
+}
